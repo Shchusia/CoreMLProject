@@ -7,3 +7,5 @@
 - (2021-10-26) Add flake8 mypy isort black
 
 - (2021-10-26) Add Dockerfile
+
+- (2021-10-26) Add base requirements

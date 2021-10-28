@@ -16,7 +16,7 @@ from ml_lib.utils import get_object_config
 
 from .utils.metrics import make_feval
 
-default_logger = Logger(__name__)
+DEFAULT_LOGGER = Logger(__name__)
 
 
 class LGBM(MLModel):
@@ -43,7 +43,7 @@ class LGBM(MLModel):
         :param Optional[MLConfig] config: settings class which will use some static constants
         """
         self.__config = get_object_config(config)
-        self.__logger = logger
+        self.__logger = logger or DEFAULT_LOGGER
         self.__fit_params, self.__model_details = dict(), dict()
 
         if path_to_model:
@@ -97,7 +97,9 @@ class LGBM(MLModel):
         self.__model_details["WAPE"] = self.__model.best_score["valid_0"]
         self.__logger.info("Finished train LGBM model")
 
-    def predict(self, data_to_predictions: pd.DataFrame, *args, **kwargs) -> pd.Series:  # type: ignore
+    def predict(  # type: ignore
+        self, data_to_predictions: pd.DataFrame, *args, **kwargs
+    ) -> pd.Series:
         """
 
         :param data_to_predictions:

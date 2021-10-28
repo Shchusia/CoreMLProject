@@ -14,6 +14,7 @@
 + [resources](./resources/README.md) - папка в которую складываются все файлы для ресерча и модели
 + [tests](./tests/README.md) - тесты на код
 + [data_handler](./data_handler/README.md) - работа с данными
++ [rest_flask](./rest_flask/README.md) - подключение rest_api
 
 ## Старт разработки
 
@@ -35,3 +36,7 @@
 > проинициализировать [git-flow](https://danielkummer.github.io/git-flow-cheatsheet/index.html#): <br>
 > `git flow init`
 
+## переменные окружения 
+
+> `APP_CONFIG` - путь к конфигу flask <br>
+> <u>example</u>: APP_CONFIG=rest_flask.config.DevConfig

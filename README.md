@@ -13,6 +13,7 @@
 + [research](./research/README.md) - папка с кодом экспериментов
 + [resources](./resources/README.md) - папка в которую складываются все файлы для ресерча и модели
 + [tests](./tests/README.md) - тесты на код
++ [data_handler](./data_handler/README.md) - работа с данными
 
 ## Старт разработки
 

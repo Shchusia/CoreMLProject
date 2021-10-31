@@ -1,8 +1,9 @@
 from flask import request
 from flask_restplus import Resource
 
+from apps import DICT_MODELS
 from rest_flask.api import API, bad_response_model
-from rest_flask.utils import good_response  # , bad_response
+from rest_flask.utils import bad_response, good_response
 
 from .serializers import good_response_recommended_sku, predict_model, predict_query
 
@@ -21,10 +22,16 @@ class PredictionModel(Resource):
         :return:
         """
         code = 200
-        # response = dict()
         data = predict_query.parse_args()
-        # bad = bad_response_model()
-        return good_response(data), code
+        model = DICT_MODELS.get("lgbm")
+        if not model:
+            code = 401
+            response = bad_response(
+                code=code, title="Server Error", detail="Not exist model fot predict"
+            )
+        else:
+            response = data
+        return good_response(response), code
 
     @API.expect(predict_model)
     @API.response(200, "Success", good_response_recommended_sku)
@@ -40,4 +47,12 @@ class PredictionModel(Resource):
         # data = predict_model
         print(request.json)
         # print(help(predict_model))
-        return good_response(request.json), code
+        model = DICT_MODELS.get("random")
+        if not model:
+            code = 401
+            response = bad_response(
+                code=code, title="Server Error", detail="Not exist model fot predict"
+            )
+        else:
+            response = request.json
+        return good_response(response), code

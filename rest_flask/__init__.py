@@ -7,13 +7,11 @@ from prometheus_client import make_wsgi_app
 from werkzeug import import_string
 from werkzeug.middleware.dispatcher import DispatcherMiddleware
 
+from apps import CONFIG, LOGGER, path_to_config
+
 from .api import API
 from .api.predict import predict_ns  # noqa
 from .utils import bad_response
-
-path_to_config = os.getenv("APP_SETTINGS", "rest_flask.config.Config")
-CONFIG = import_string(path_to_config)
-LOGGER = Logger(CONFIG.APP_NAME)
 
 APP = Flask(CONFIG.APP_NAME)
 APP.logger.addHandler(LOGGER)

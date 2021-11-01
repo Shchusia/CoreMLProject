@@ -26,12 +26,14 @@
 
 - (2021-11-01) Added base structure mq_rabbit
 
-- (2021-10-28) Merge to develop
+- (2021-11-01) Merge to develop
 
-- (2021-10-28) Added base cron
+- (2021-11-01) Added base cron
 
-- (2021-10-28) Merge to develop
+- (2021-11-01) Merge to develop
 
 - (2021-11-01) Refactoring and added descriptions
 
-- (2021-10-28) Merge to develop
+- (2021-11-01) Merge to develop
+
+- (2021-11-01) first version of recommendations

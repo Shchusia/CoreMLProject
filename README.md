@@ -15,6 +15,8 @@
 + [tests](./tests/README.md) - тесты на код
 + [data_handler](./data_handler/README.md) - работа с данными
 + [rest_flask](./rest_flask/README.md) - подключение rest_api
++ [utils](./utils/README.md) - глобальные функции 
++ [mq_rabbit](./mq_rabbit/README.md) - подключение взаимодействия через rabbit 
 
 ## Старт разработки
 
@@ -39,4 +41,8 @@
 ## переменные окружения 
 
 > `APP_CONFIG` - путь к конфигу flask <br>
-> <u>example</u>: APP_CONFIG=rest_flask.config.DevConfig
+> <u>example</u>: APP_CONFIG=config.DevConfig
+
+## Рекомендации по выбору направления и шагам разработки
+
+![img](./src/CoreMl.drawio.png)

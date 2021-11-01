@@ -13,12 +13,12 @@ from .api import API
 from .api.predict import predict_ns  # noqa
 from .utils import bad_response
 
-APP = Flask(CONFIG.APP_NAME)
+APP = Flask(CONFIG.SERVICE_NAME)
 APP.logger.addHandler(LOGGER)
 APP.config.from_object(path_to_config)
 
 BLUEPRINTS = Blueprint(
-    CONFIG.APP_NAME + "_API", CONFIG.APP_NAME, url_prefix=CONFIG.BASE_URL
+    CONFIG.SERVICE_NAME + "_API", CONFIG.SERVICE_NAME, url_prefix=CONFIG.BASE_URL
 )
 API.init_app(BLUEPRINTS)
 APP.register_blueprint(BLUEPRINTS)

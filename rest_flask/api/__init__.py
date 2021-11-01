@@ -8,7 +8,7 @@ from werkzeug import import_string
 
 CONFIG = import_string(os.getenv("APP_SETTINGS", "rest_flask.config.Config"))
 
-API = Api(version=CONFIG.API_VERSION, title=CONFIG.APP_NAME + "_API")
+API = Api(version=CONFIG.API_VERSION, title=CONFIG.SERVICE_NAME + "_API")
 
 error_model = API.model(
     "ErrorModel",

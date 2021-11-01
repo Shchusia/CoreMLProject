@@ -46,6 +46,14 @@ class Rabbit:
         section="rabbit",
         heartbeat=0,
     ):
+        """
+        For config loader lab lib
+        :param config_dir:
+        :param config_file:
+        :param log:
+        :param section:
+        :param heartbeat:
+        """
         config = dict()  # type: Dict[str, Any]
         self._host = config["rabbit_host"]
         self._port = config["rabbit_port"]

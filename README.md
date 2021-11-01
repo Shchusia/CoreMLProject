@@ -2,7 +2,8 @@
 
 Пример проекта для ДС-ов чтоб разрабатываеть в структуре удобной к деплою в будущем.
 
-## Папки: 
+## Папки:
++ [apps](./apps/README.md) - переменные для глобального доступа
 + [ml_lib](./ml_lib/README.md) - базовая папка для моделей
 + [ml_lib_doc](./ml_lib_doc/README.md) - документация к ml_lib
 + requirements - необходимые библиотеки для разработки
@@ -14,9 +15,10 @@
 + [resources](./resources/README.md) - папка в которую складываются все файлы для ресерча и модели
 + [tests](./tests/README.md) - тесты на код
 + [data_handler](./data_handler/README.md) - работа с данными
++ [utils](./utils/README.md) - глобальные функции
 + [rest_flask](./rest_flask/README.md) - подключение rest_api
-+ [utils](./utils/README.md) - глобальные функции 
 + [mq_rabbit](./mq_rabbit/README.md) - подключение взаимодействия через rabbit 
++ [cron_functions](./cron_functions/README.md) - папка для крон задач
 
 ## Старт разработки
 
